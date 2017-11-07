@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="jquery-3.2.1.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Jquery-4-2</title>
+</head>
+<body>
+  <form class="" action="index.html" method="post">
+    <input id="french" class="notes" type="text" name="" value="">
+    <input id="math" class="notes" type="text" name="" value="">
+    <input id="history" class="notes" type="text" name="" value="">
+    <input id="science" class="notes" type="text" name="" value="">
+    <input id="english" class="notes" type="text" name="" value="">
+    <button id="calcul" type="button" name="button">Calcule</button>
+  </form>
+  <p></p>
+  <script>
+  $(function(){
+    $('#calcul').click(function(){
+      var result = (parseInt($('#french').val()) + parseInt($('#math').val()) + parseInt($('#history').val()) + parseInt($('#science').val()) + parseInt($('#english').val()))/ 5;
+      console.log(result);
+      if (result >= 0 && result < 10 ){
+        $('p').text ('En dessous de la moyenne ! ');
+      }
+      else if (result >= 10 && result < 13){
+        $('p').text ('Moyen! ');
+      }
+      else if (result >= 13 && result < 16) {
+        $('p').text ('bien ! ');
+      }
+      else if (result >= 16 && result < 20){
+        $('p').text('Très bien ! ');
+      }
+      else {
+        $('p').text('Excellent !');
+      }
+    });
+  });
+
+
+
+
+  </script>
+</body>
+</html>
